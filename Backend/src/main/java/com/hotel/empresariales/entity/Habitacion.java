@@ -8,19 +8,18 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "clientes")
-public class Cliente {
+@Table(name = "habitaciones")
+public class Habitacion {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_cliente;
-    private String nombre;
-    private String apellido;
-    private String correo;
-    private String telefono;
-    private String direccion;
+    private Long id_habitacion;
+    private int numero_habitacion;
+    private String tipo_habitacion;
+    private Double precio_habitacion;
+    private String estado;
 
-    @OneToMany(mappedBy = "cliente")
+    @OneToMany(mappedBy = "habitacion")
     private List<Reserva> reservas;
-
 
 }
