@@ -2,6 +2,7 @@ package com.hotel.empresariales.service;
 
 import com.hotel.empresariales.entity.Reserva;
 import com.hotel.empresariales.repository.ReservaRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +12,9 @@ import java.util.List;
 public class ReservaService {
 
 
+    @Autowired
     private final ReservaRepository reservaRepository;
 
-    @Autowired
     public ReservaService(ReservaRepository reservaRepository){
         this.reservaRepository = reservaRepository;
     }
