@@ -13,8 +13,7 @@ public class SecurityConfig {
         // Desactivar CSRF para pruebas con Postman
         http.csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/crearClt").permitAll()  // Permitir acceso sin autenticación a este endpoint
-                .anyRequest().authenticated()  // Requerir autenticación para otros endpoints
+                .requestMatchers("/cliente/crearClt").permitAll()  // Permitir acceso sin autenticación a este endpoint
             );
         
         return http.build();
