@@ -2,6 +2,7 @@ package com.hotel.empresariales.controller;
 
 import com.hotel.empresariales.entity.Habitacion;
 import com.hotel.empresariales.service.HabitacionService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,9 +14,9 @@ import java.util.List;
 @RequestMapping(path = "/habitacion")
 public class HabitacionController {
 
+    @Autowired
     private final HabitacionService habitacionService;
 
-    @Autowired
     public HabitacionController(HabitacionService habitacionService) {
         this.habitacionService = habitacionService;
     }

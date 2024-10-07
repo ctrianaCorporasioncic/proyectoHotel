@@ -2,6 +2,7 @@ package com.hotel.empresariales.service;
 
 import com.hotel.empresariales.entity.Habitacion;
 import com.hotel.empresariales.repository.HabitacionRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +11,9 @@ import java.util.List;
 @Service
 public class HabitacionService {
 
+    @Autowired
     private final HabitacionRepository habitacionRepository;
 
-    @Autowired
     public HabitacionService(HabitacionRepository habitacionRepository){
         this.habitacionRepository = habitacionRepository;
     }
